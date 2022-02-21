@@ -1,0 +1,4 @@
+az appservice plan create --name cliplan1000 --resource-group cli-grp --sku F1
+
+az webapp create --name webapp9088776 --plan cliplan1000 --resource-group cli-grp
+                 

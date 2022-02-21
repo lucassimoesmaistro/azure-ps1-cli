@@ -1,0 +1,22 @@
+# Create the Kubernetes cluster
+az aks create --resource-group app-grp --name appcluster --node-count 1 --enable-addons monitoring --generate-ssh-keys
+
+# Only if you don't have the kubectl tools. This is already available in Azure Cloud Shell
+az aks install-cli
+
+# Get the credentials of the cluster
+az aks get-credentials --resource-group app-grp --name appcluster
+
+# Get the status of the Kubernetes nodes
+kubectl get nodes
+
+# Apply the application configuration files
+kubectl apply -f deployment.yml
+
+kubectl apply -f service.yml
+
+# Get the external IP for the service
+kubectl get service app-service
+
+#delete the cluster
+az aks delete --name appcluster --resource-group app-grp --no-wait --yes

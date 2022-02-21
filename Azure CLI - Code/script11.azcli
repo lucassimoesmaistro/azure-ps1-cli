@@ -1,0 +1,2 @@
+az vm create --resource-group app-grp --name linuxvm --image Canonical:UbuntuServer:18.04-LTS:latest --custom-data config.txt --admin-username demousr --admin-password "AzurePassword@123"
+

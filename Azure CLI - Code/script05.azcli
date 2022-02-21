@@ -1,0 +1,3 @@
+az vm list-sizes --location "North Europe"
+
+az vm create --name "appvm" --resource-group "cli-grp" --admin-username "demousr" --image "Win2019Datacenter" --size "Standard_DS2_v2" --subnet "SubnetA" --vnet-name "app-network"

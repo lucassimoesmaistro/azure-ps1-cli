@@ -1,0 +1,1 @@
+az storage account create --name appstore465665 --resource-group cli-grp --kind StorageV2 --sku Standard_LRS

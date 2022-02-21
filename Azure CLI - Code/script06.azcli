@@ -1,0 +1,6 @@
+az disk create --name data-disk --resource-group cli-grp --location "North Europe" --size-gb 16 
+
+$id=az disk show --name data-disk --resource-group cli-grp --query id
+
+az vm disk attach --vm-name appvm --lun 0 --resource-group cli-grp --ids $id
+

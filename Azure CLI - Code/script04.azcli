@@ -1,0 +1,3 @@
+# Quick create a VM
+
+az vm create --resource-group cli-grp --name appvm --image Win2019Datacenter --public-ip-sku Standard --admin-username demousr

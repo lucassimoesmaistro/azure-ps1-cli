@@ -1,0 +1,1 @@
+az vmss create --name app-set --resource-group cli-grp --admin-username demousr --image Win2019Datacenter --vm-sku "Standard_DS2_v2"
