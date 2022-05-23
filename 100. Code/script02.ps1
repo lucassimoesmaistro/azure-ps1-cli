@@ -1,4 +1,4 @@
-$resourceGroup = "exam-grp"
+$resourceGroup = "rgp-fiap-powershell"
 $location = "North Europe"
 $network="exam-network"
 $AddressPrefix="10.1.0.0/16"

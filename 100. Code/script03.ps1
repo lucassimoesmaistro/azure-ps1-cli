@@ -1,4 +1,4 @@
-$resourceGroup = "exam-grp"
+$resourceGroup = "rgp-fiap-powershell"
 $network="exam-network"
 
 $virtualNetwork=Get-AzVirtualNetwork -Name $network -ResourceGroupName $resourceGroup

@@ -1,0 +1,9 @@
+az group create --location brazilsouth --name "grp-fiap"
+
+az appservice plan create --name fiapcliplan --resource-group grp-fiap --sku F1
+
+az webapp create --name webapptestefiap --plan fiapcliplan --resource-group grp-fiap
+
+az webapp deployment source config-zip \
+    -g grp-fiap -n webapptestefiap \
+    --src "C:\_github\fiap-cloud-development\_azure\BuildingAnApplicationThatConnectsToTheSQLDatabase\sqlapp\sqlapp\bin\Debug\net6.0\publish\publish.zip"

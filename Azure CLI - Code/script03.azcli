@@ -1,5 +1,5 @@
-az network vnet show -g cli-grp -n cli-network
+az network vnet show -g rgp-fiap-powershell -n exam-network
 
 az network vnet list
-
-az network vnet subnet create --name SubnetB --address-prefixes 10.0.1.0/24 --resource-group cli-grp --vnet-name cli-network
+10.0.0.0/16
+az network vnet subnet create --name SubnetB --address-prefixes 10.0.1.0/24 --resource-group rgp-fiap-powershell --vnet-name m-network
