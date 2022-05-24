@@ -1,0 +1,9 @@
+docker build -t dockerapp .
+
+az acr login --name acrfiap --username acrfiap --password Yq1GM4hD1iWA3=IdwEVSRkrF1DqayToO
+
+docker tag dockerapp acrfiap.azurecr.io/dockerapp
+
+docker push acrfiap.azurecr.io/dockerapp
+
+docker run --name dockerapp-1 -p 3000:80 -d dockerapp
